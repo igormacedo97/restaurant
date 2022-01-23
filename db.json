@@ -35,7 +35,7 @@
       "name": "Pizza de Calabresa",
       "description": "Molho de tomate, calabresa e queijo",
       "price": 25.0,
-      "offer": false
+      "offer": true
     }
   ]
 }
