@@ -1,5 +1,6 @@
 <template>
   <div class="items-list">
+    {{ selectedCategory }}
     <Item v-for="item in itemsList" :key="item.id" :item="item" />
   </div>
 </template>
@@ -18,10 +19,27 @@ export default {
       itemsList: [],
     };
   },
-  created() {
-    axios.get("http://localhost:3000/burguers").then((response) => {
-      this.itemsList = response.data;
-    });
+  created() {},
+  computed: {
+    selectedCategory: {
+      get() {
+        return this.$store.state.selectedCategory;
+      },
+    },
+  },
+  methods: {
+    getItemsList() {
+      axios
+        .get(`http://localhost:3000/${this.selectedCategory}`)
+        .then((response) => {
+          this.itemsList = response.data;
+        });
+    },
+  },
+  watch: {
+    selectedCategory() {
+      this.getItemsList();
+    },
   },
 };
 </script>
