@@ -55,7 +55,7 @@ export default {
 .items-list {
   margin: 50px;
   display: flex;
-  width: 100%;
+  // width: 100%;
 
   @media @tablets {
     flex-wrap: wrap;

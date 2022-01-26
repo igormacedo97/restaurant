@@ -97,14 +97,14 @@
       "name": "Combo 1",
       "description": "1 hamburguer duplo, 1 guaraná lata e 1 milkshake chocolate",
       "price": 50.0,
-      "offer": false
+      "offer": true
     },
     {
       "id": "2",
       "name": "Combo 2",
       "description": "2 pizzas",
       "price": 45.0,
-      "offer": false
+      "offer": true
     }
   ]
 }
